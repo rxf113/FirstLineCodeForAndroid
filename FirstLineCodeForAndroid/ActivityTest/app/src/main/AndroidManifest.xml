@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.rxf113.activitytest">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="This is FirstActivity"
+        android:roundIcon="@drawable/ic_launcher_background"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ActivityTest">
+        <activity
+            android:name=".ThirdActivity"
+            android:exported="true" >
+            <!--配置了当前Activity能够响应的action是Intent.ACTION_VIEW的常量值，而category则毫无疑问地指定了默认的category值，另外在<data>标签中，我们通过android:scheme指定了数据的协议必须是https协议，这样ThirdActivity应该就和浏览器一样，能够响应一个打开网页的Intent了-->
+            <intent-filter tools:ignore="AppLinkUrlError">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="https"/>
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".SecondActivity"
+            android:exported="true">
+
+            <!-- 指定当前Activity能够响应的action和category -->
+            <intent-filter>
+                <action android:name="com.rxf113.activitytest.ACTION_START" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.rxf113.activitytest.MY_CATEGORY" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".FirstActivity"
+            android:exported="true">
+
+            <!-- 配置主 activity -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
