@@ -17,12 +17,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         //setContentView(R.layout.activity_main)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.button.setOnClickListener(this)
+        //binding.button.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
         when (v?.id) {
-            binding.button.id -> {
+         //   binding.button.id -> {
                 //此处添加逻辑
                 //显示editText中的文字
 //                val inputText = binding.editText.text.toString()
@@ -42,19 +42,19 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 //binding.processBar.progress = binding.processBar.progress + 10
 
                 //AlertDialog可以在当前界面弹出一个对话框
-                AlertDialog.Builder(this).apply {
-                    setTitle("This is Dialog")
-                    setMessage("Something important.")
-                    setCancelable(false)
-                    setPositiveButton("OK") { _, _
-                        ->
-                    }
-                    setNegativeButton("Cancel") { _, _
-                        ->
-                    }
-                    show()
-                }
-            }
+//                AlertDialog.Builder(this).apply {
+//                    setTitle("This is Dialog")
+//                    setMessage("Something important.")
+//                    setCancelable(false)
+//                    setPositiveButton("OK") { _, _
+//                        ->
+//                    }
+//                    setNegativeButton("Cancel") { _, _
+//                        ->
+//                    }
+//                    show()
+//                }
+        //    }
         }
     }
 }
