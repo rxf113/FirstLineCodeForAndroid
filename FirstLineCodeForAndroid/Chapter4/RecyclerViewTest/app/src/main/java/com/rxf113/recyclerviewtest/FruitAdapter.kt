@@ -7,6 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.rxf113.recyclerviewtest.databinding.FruitItemBinding
 
 class FruitAdapter(val fruitList: List<Fruit>) : RecyclerView.Adapter<FruitAdapter.ViewHolder>() {
 
@@ -16,8 +17,8 @@ class FruitAdapter(val fruitList: List<Fruit>) : RecyclerView.Adapter<FruitAdapt
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.fruit_item, parent, false)
-        val viewHolder = ViewHolder(view)
+        val binding = FruitItemBinding.inflate(LayoutInflater.from(parent.context))
+        val viewHolder = ViewHolder(binding.root)
         viewHolder.itemView.setOnClickListener{
             val position = viewHolder.adapterPosition
             val fruit = fruitList[position]
