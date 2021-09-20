@@ -1,4 +1,4 @@
-package com.example.servicetest
+package com.rxf113.servicetest
 
 import android.content.Context
 import android.content.Intent
