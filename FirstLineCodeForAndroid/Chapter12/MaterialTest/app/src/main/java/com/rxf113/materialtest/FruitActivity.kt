@@ -19,7 +19,7 @@ class FruitActivity : AppCompatActivity() {
         setContentView(fruitBinding.root)
 
         val fruitName = intent.getStringExtra(FRUIT_NAME)
-        val fruitImageId = intent.getStringExtra(FRUIT_IMAGE_ID)
+        val fruitImageId = intent.getIntExtra(FRUIT_IMAGE_ID,0)
         setSupportActionBar(fruitBinding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         fruitBinding.collapsingToolbar.title = fruitName
